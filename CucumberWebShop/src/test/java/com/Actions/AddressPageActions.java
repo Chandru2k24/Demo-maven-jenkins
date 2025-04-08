@@ -51,7 +51,7 @@ public class AddressPageActions {
 	            break;
 	        }
 	    }
-	    String FilePath = "C:\\Users\\drcha\\Desktop\\Cucumber\\CucumberWebShop\\src\\test\\resources\\TestData.xlsx";
+	    String FilePath = "C:\\Users\\drcha\\git\\CucumberMavenPOM\\CucumberWebShop\\src\\test\\resources\\TestData.xlsx";
 	    String sheetName = "Sheet1";
 	    
 	    Map<String, String> addrData = ExcelData.getAddressDetails(FilePath, sheetName);

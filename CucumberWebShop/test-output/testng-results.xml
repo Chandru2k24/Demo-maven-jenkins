@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-07T23:08:58 IST" name="Suite" finished-at="2025-04-07T23:09:54 IST" duration-ms="56330">
+  <suite started-at="2025-04-08T06:59:11 IST" name="Default suite" finished-at="2025-04-08T07:01:02 IST" duration-ms="110875">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-04-07T23:08:58 IST" name="Test" finished-at="2025-04-07T23:09:54 IST" duration-ms="56330">
+    <test started-at="2025-04-08T06:59:11 IST" name="Default test" finished-at="2025-04-08T07:01:02 IST" duration-ms="110875">
       <class name="com.Runner.RunnerTestNG">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" started-at="2025-04-07T23:08:58 IST" name="setUpClass" finished-at="2025-04-07T23:08:58 IST" duration-ms="631" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" started-at="2025-04-08T06:59:11 IST" name="setUpClass" finished-at="2025-04-08T06:59:12 IST" duration-ms="634" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4e0802e0]]>
+                <![CDATA[org.testng.TestRunner@433ae0b0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" started-at="2025-04-07T23:08:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-07T23:09:09 IST" duration-ms="10373" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" started-at="2025-04-08T06:59:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-08T06:59:42 IST" duration-ms="29673" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" started-at="2025-04-07T23:09:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-07T23:09:18 IST" duration-ms="9233" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" started-at="2025-04-08T06:59:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-08T07:00:10 IST" duration-ms="28661" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" started-at="2025-04-07T23:09:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-07T23:09:53 IST" duration-ms="34552" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" started-at="2025-04-08T07:00:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-04-08T07:01:00 IST" duration-ms="49893" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -66,14 +66,38 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (a6ba8c26ea56089c5af1aef66ea0640d)] -> xpath: //*[@id="shipping-buttons-container"]/input] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: C:\Users\drcha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59753}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59753/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a6ba8c26ea56089c5af1aef66ea0640d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (a6ba8c26ea56089c5af1aef66ea0640d)] -> xpath: //*[@id="shipping-buttons-container"]/input] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: C:\Users\drcha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59753}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59753/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a6ba8c26ea56089c5af1aef66ea0640d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.Actions.AddressPageActions.ClickContinueShippingAddress(AddressPageActions.java:84)
+at com.StepDefinitions.LoginPageDefinition.click_continue_button_for_shipping_address(LoginPageDefinition.java:150)
+at ✽.click continue button for Shipping address(file:///C:/Users/drcha/git/CucumberMavenPOM/CucumberWebShop/src/test/resources/features/OrderAndCheckout.feature:19)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" started-at="2025-04-07T23:09:53 IST" name="tearDownClass" finished-at="2025-04-07T23:09:54 IST" duration-ms="1489" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.RunnerTestNG@33990a0c]" started-at="2025-04-08T07:01:00 IST" name="tearDownClass" finished-at="2025-04-08T07:01:02 IST" duration-ms="1951" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.Runner.RunnerTestNG -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

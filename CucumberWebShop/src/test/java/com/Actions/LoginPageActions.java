@@ -51,7 +51,7 @@ public class LoginPageActions {
 		 return objLoginPage.welcomeText.getText();
 	}
 	public void loginCredentials() {
-		File fileIn = new File("C:\\Users\\drcha\\Desktop\\Cucumber\\CucumberWebShop\\src\\test\\resources\\Data.properties");
+		File fileIn = new File("C:\\Users\\drcha\\git\\CucumberMavenPOM\\CucumberWebShop\\src\\test\\resources\\Data.properties");
 		
 		FileInputStream fileInput = null ;
 		

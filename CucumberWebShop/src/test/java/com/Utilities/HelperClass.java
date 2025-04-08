@@ -41,7 +41,6 @@ public class HelperClass {
 	public static void TearDown() {
 		if(driver != null) {
 			logger.info("Closing Web Browser");
-			driver.close();
 			driver.quit();
 		}
 		helperClass = null;

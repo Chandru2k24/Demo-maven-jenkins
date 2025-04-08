@@ -40,6 +40,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Apr 7, 2025 11:08:58 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Apr 8, 2025 06:59:11 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -65,6 +66,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -120,12 +122,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>2</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$50%'>
+                    <span class='strong'>1</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -138,12 +140,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>3</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66%'>
+                    <span class='strong'>2</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
+                    1</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -158,14 +160,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>30</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='76%'>
+                    <span class='strong'>23</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='3%'>
+                    1</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='20%'>
+                    6</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -189,7 +191,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Login into the DemoWebShop WebSite</span>
-						<span class='test-time'>Apr 7, 2025 11:08:59 PM</span>
+						<span class='test-time'>Apr 8, 2025 06:59:12 AM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -202,7 +204,7 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 10.222</span>
+	<span class='duration right label'>00 00 29.444</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Login with valid credentials</div>
 	</div>
@@ -242,7 +244,7 @@
 </div>
 <div class='scenario outline node' test-id='10' status='pass'>
 
-	<span class='duration right label'>00 00 09.228</span>
+	<span class='duration right label'>00 00 28.631</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Login with invalid credentials</div>
 	</div>
@@ -281,11 +283,11 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='18'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='18'>
 					<div class='test-heading'>
 						<span class='test-name'>Purchasing the product</span>
-						<span class='test-time'>Apr 7, 2025 11:09:18 PM</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-time'>Apr 8, 2025 07:00:10 AM</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -295,11 +297,11 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario node' test-id='19' status='pass'>
+<div class='scenario node' test-id='19' status='fail'>
 
-	<span class='duration right label'>00 00 34.504</span>
+	<span class='duration right label'>00 00 49.875</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: ordering the computer</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: ordering the computer</div>
 	</div>
 	
 	
@@ -378,40 +380,58 @@
 
 
 		</li>
-		<li test-id='35' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.click_continue_button_for_shipping_address())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click continue button for Shipping address</div>
+		<li test-id='35' class='node and Fail' status='Fail'>
+			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.click_continue_button_for_shipping_address())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And click continue button for Shipping address</div>
 
 
+					<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (a6ba8c26ea56089c5af1aef66ea0640d)] -> xpath: //*[@id="shipping-buttons-container"]/input] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: C:\Users\drcha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59753}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59753/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a6ba8c26ea56089c5af1aef66ea0640d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.Actions.AddressPageActions.ClickContinueShippingAddress(AddressPageActions.java:84)
+	at com.StepDefinitions.LoginPageDefinition.click_continue_button_for_shipping_address(LoginPageDefinition.java:150)
+	at ✽.click continue button for Shipping address(file:///C:/Users/drcha/git/CucumberMavenPOM/CucumberWebShop/src/test/resources/features/OrderAndCheckout.feature:19)
+</textarea>
 		</li>
-		<li test-id='36' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.click_continue_button_for_shipping_method())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click continue button for Shipping Method</div>
+		<li test-id='36' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.click_continue_button_for_shipping_method())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And click continue button for Shipping Method</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='37' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.click_continue_button_for_payment_method())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click continue button for Payment Method</div>
+		<li test-id='37' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.click_continue_button_for_payment_method())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And click continue button for Payment Method</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='38' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.click_continue_button_for_payment_information())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click continue button for Payment Information</div>
+		<li test-id='38' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.click_continue_button_for_payment_information())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And click continue button for Payment Information</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='39' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.click_continue_button_for_confirm_order())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click continue button for confirm order</div>
+		<li test-id='39' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.click_continue_button_for_confirm_order())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And click continue button for confirm order</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='40' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.verify_the_order())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Verify the order</div>
+		<li test-id='40' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.verify_the_order())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Verify the order</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='41' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.the_user_is_able_to_see_the_order_number())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the User is able to see the order number</div>
+		<li test-id='41' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.StepDefinitions.LoginPageDefinition.the_user_is_able_to_see_the_order_number())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the User is able to see the order number</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -481,7 +501,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 7, 2025 11:09:09 PM</td>
+										<td>Apr 8, 2025 06:59:42 AM</td>
 										<td class='linked' test-id='11'>Login with invalid credentials</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
@@ -494,13 +514,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@AddToCart</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -514,9 +534,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 7, 2025 11:09:18 PM</td>
+										<td>Apr 8, 2025 07:00:10 AM</td>
 										<td class='linked' test-id='19'>ordering the computer</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -547,7 +567,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 7, 2025 11:08:59 PM</td>
+										<td>Apr 8, 2025 06:59:12 AM</td>
 										<td class='linked' test-id='2'>Login with valid credentials</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
@@ -565,7 +585,73 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.TimeoutException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 8, 2025 07:00:49 AM</td>
+										<td class='linked' test-id='35'>And click continue button for Shipping address</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (a6ba8c26ea56089c5af1aef66ea0640d)] -> xpath: //*[@id="shipping-buttons-container"]/input] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: C:\Users\drcha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59753}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59753/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a6ba8c26ea56089c5af1aef66ea0640d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.Actions.AddressPageActions.ClickContinueShippingAddress(AddressPageActions.java:84)
+	at com.StepDefinitions.LoginPageDefinition.click_continue_button_for_shipping_address(LoginPageDefinition.java:150)
+	at ✽.click continue button for Shipping address(file:///C:/Users/drcha/git/CucumberMavenPOM/CucumberWebShop/src/test/resources/features/OrderAndCheckout.feature:19)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -591,19 +677,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 7, 2025 11:08:58 PM</div>
+					<div class='panel-lead'>Apr 8, 2025 06:59:11 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 7, 2025 11:09:53 PM</div>
+			 		<div class='panel-lead'>Apr 8, 2025 07:01:00 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 54.586</div>
+					<div class='panel-lead'>00 01 48.738</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -649,11 +735,11 @@
 						</tr>
 						<tr>
 							<td>@AddToCart</td>
+							<td>0</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
@@ -677,34 +763,34 @@
 		<script>
 			var statusGroup = {
                 parentCount: 2,
-				passParent: 2,
-				failParent: 0,
+				passParent: 1,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 3,
-				passChild: 3,
-				failChild: 0,
+				passChild: 2,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				grandChildCount: 30,
-				passGrandChild: 30,
-				failGrandChild: 0,
+				passGrandChild: 23,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 6,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Login into the DemoWebShop WebSite":19.462,"Purchasing the product":34.504
+			        "Login into the DemoWebShop WebSite":58.125,"Purchasing the product":49.876
 			};
 		</script>
 		
